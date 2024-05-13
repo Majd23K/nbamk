@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Home Page</title>
+    <style>
+        body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #860038;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 0.5em;
+    border-radius: 10px 10px 10px 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 1em;
+    flex-basis: 50%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+    li {
+                flex-basis: 33.33%;
+       }
+}
+nav a {
+    text-decoration: none;
+    color: #860038;
+}
+
+nav a:hover {
+    color: #1D428A;
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.2);
+    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+#featured-team {
+    flex-basis: 40%;
+    margin-right: 2em;
+}
+
+#featured-team h2 {
+    margin-top: 0;
+}
+
+/*#featured-team img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1em;
+} */
+
+#latest-news {
+    flex-basis: 50%;
+}
+
+#latest-news h2 {
+    margin-top: 0;
+}
+
+#latest-news ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#latest-news li {
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #860038;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    margin-top: 2em;
+}
+        #loginform {
+            position: absolute;
+            left: 2000px;
+            resize: 100px;
+             border-radius: 10px 10px 10px 10px;
+        }
+        li {
+            transition: transform 0.2s ease-in-out;
+        }
+        li:hover {
+            transform: scale(1.2);
+        }
+        
+        #bg {
+            background-image: url(header.png);
+            background-size: cover;
+            background-position: center;
+            height: 0px;
+            width: 5000px;
+        }
+        /* slideshow */
+       .slideshow {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+} 
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10px;
+  animation: slideShow 12s infinite;
+  opacity: 0;
+} 
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+/* Add more slides as needed */
+
+.caption {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes slideShow {
+  0% {opacity: 0;}
+  8% {opacity: 1;}
+  33% {opacity: 1;}
+  41% {opacity: 0;}
+  100% {opacity: 0; animation-delay: 10s;}
+}
+        nav a.active {
+    color: #fff;
+    background-color: #1D428A;
+    
+}
+        #button {
+            background-color: #1D428A;
+            color: white;
+            border-radius: 4px 4px 4px 4px;
+            
+        }
+        button:hover {
+            opacity: 0.8;
+            transform: scale(1.4);
+        }
+        
+        #field {
+            border-radius: 4px 4px 4px 4px;
+            background-color: dimgrey;
+        }
+        
+        #field:focus {
+            background-color: white;
+            color: #860038;
+        }
+        
+        input::placeholder {
+  color: #860038;
+}
+        .radio-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-row {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.radio-row label {
+  flex: 1 1 12.5%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.radio-row input[type="radio"] {
+  display: flex;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="nbalogo4.png" alt="NBA Logo" id="nba-logo" style="width: 8%">
+        <!--<h1>Welcome to the NBA's Official Website!</h1>-->
+        <nav style="position: absolute; top: auto; left: 1000px;">
+            <ul>
+                <li><a href=home.html class="active">HOME</a></li>
+                <li><a href="teams.html">TEAMS &amp; PLAYERS</a></li>
+                <li><a href="schedule.html">SCHEDULE</a></li>
+                <li><a href="stats.html">HISTORY</a></li>
+            </ul>
+        </nav>
+        <div id="loginform">
+            <input type="text" id="field" placeholder="Username" style="position: absolute;top: -30px; width: 150px; height: 30px">
+            <input type="password" id="field" placeholder="Password" style="position: absolute; top: 10px; width: 150px; height: 30px">
+        </div>
+         <button id="button" style="position: absolute; top: 65px; left: 2190px; width: 85px; height: 35px;"> LOG IN </button>
+    </header>
+    <img src="header.png" id="bg">
+    <main>
+ <section id="latest-news" style="position: absolute; right: 100px">
+            <h2>Latest News</h2>
+            <ul>
+                <li><a href="news1.html">LeBron James named MVP for record-tying 5th time</a></li>
+                <li><a href="news2.html">NBA announces All-Rookie teams</a></li>
+                <li><a href="news3.html">NBA playoffs preview: who will make it to the Finals?</a></li>
+            </ul>
+        </section>
+        <section id="featured-team">
+            <!--<h2 style=" position: absolute; left: 1050px">Featured Teams:</h2>-->
+       
+        <div class="slideshow">
+  <div class="slide">
+    <img src="lakers.png" alt="Slide 1" style="height: 350px; width: 500px; position: absolute; left: 450px;">
+     
+    <div class="caption">
+      <h2>Los Angeles Lakers</h2>
+      <p>17-time championship winners, having a great season so far!</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="celtics.webp" alt="Slide 2" style="height: 350px; width: 500px; position: absolute; left: 450px;">
+      <br>
+    <div class="caption">
+      <h2>Boston Celtics</h2>
+      <p>10-time championship winners, great chances of making the 2024 playoffs!</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="miamiheat.png" alt="Slide 3" style="height: 350px; width: 450px; position: absolute; left: 500px;">
+      <br>
+    <div class="caption">
+      <h2>Miami Heat</h2>
+      <p>3-time only championship winners, but having an amazing season so far!</p>
+    </div>
+  </div>
+</div>
+            <br>
+            <br>
+            <h1 style="font-family: monospace">HOT QUESTION: Who do you think think will win this year's playoffs?</h1>
+            <div class="radio-container">
+            <div class="radio-row">
+            <input type="radio" id="radio" name="playoffs" value="lakers">
+            <label for="radio">Lakers</label>
+            <input type="radio" id="radio" name="playoffs" value="blazers">
+            <label for="radio">Trail Blazers</label>
+            <input type="radio" id="radio" name="playoffs" value="rockets">
+            <label for="radio">Rockets</label>
+            <input type="radio" id="radio" name="playoffs" value="thunder">
+            <label for="radio">Thunder</label>
+            <input type="radio" id="radio" name="playoffs" value="nuggets">
+            <label for="radio">Nuggets</label>
+            <input type="radio" id="radio" name="playoffs" value="jazz">
+            <label for="radio">Jazz</label>
+            <input type="radio" id="radio" name="playoffs" value="clippers">
+            <label for="radio">Clippers</label>
+            <input type="radio" id="radio" name="playoffs" value="mavericks">
+            <label for="radio">Mavericks</label>
+            </div>
+            <br>
+            <br>
+            <div class="radio-row">
+            <input type="radio" id="radio" name="playoffs" value="bucks">
+            <label for="radio">Bucks</label>
+            <input type="radio" id="radio" name="playoffs" value="magic">
+            <label for="radio">Magic</label>
+            <input type="radio" id="radio" name="playoffs" value="Pacers">
+            <label for="radio">Pacers</label>
+            <input type="radio" id="radio" name="playoffs" value="heat">
+            <label for="radio">Heat</label>
+            <input type="radio" id="radio" name="playoffs" value="celtics">
+            <label for="radio">Celtics</label>
+            <input type="radio" id="radio" name="playoffs" value="76ers">
+            <label for="radio">76ers</label>
+            <input type="radio" id="radio" name="playoffs" value="raptors">
+            <label for="radio">Raptors</label>
+            <input type="radio" id="radio" name="playoffs" value="nets">
+            <label for="radio">Nets</label>
+            </div>
+            </div>
+            <button type="submit" style="position: absolute; top: 700px; right: 400px; width: 100px; height: 45px" id="button">Submit</button>
+            <br>
+            <img src="brackets.jpeg" style="width: 100%; height: auto; position: sticky; float: left; width: 1500px; height: auto">
+            </main>
+    </body>
+    <footer>
+        <p>&copy; 2024 NBA Teams By Majd Al Kakhi for CSC215 | All Rights Reserved</p>
+    </footer>
+   

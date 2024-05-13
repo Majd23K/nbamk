@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Home Page</title>
+    <style>
+        body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #860038;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 0.5em;
+    border-radius: 10px 10px 10px 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 1em;
+    flex-basis: 50%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+    li {
+                flex-basis: 33.33%;
+       }
+}
+nav a {
+    text-decoration: none;
+    color: #860038;
+}
+
+nav a:hover {
+    color: #1D428A;
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.2);
+    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+#featured-team {
+    flex-basis: 40%;
+    margin-right: 2em;
+}
+
+#featured-team h2 {
+    margin-top: 0;
+}
+
+/*#featured-team img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1em;
+} */
+
+#latest-news {
+    flex-basis: 50%;
+}
+
+#latest-news h2 {
+    margin-top: 0;
+}
+
+#latest-news ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#latest-news li {
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #860038;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    margin-top: 2em;
+}
+        #loginform {
+            position: absolute;
+            left: 2000px;
+            resize: 100px;
+             border-radius: 10px 10px 10px 10px;
+        }
+        li {
+            transition: transform 0.2s ease-in-out;
+        }
+        li:hover {
+            transform: scale(1.2);
+        }
+        
+        #bg {
+            background-image: url(header.png);
+            background-size: cover;
+            background-position: center;
+            height: 0px;
+            width: 5000px;
+        }
+        /* slideshow */
+       .slideshow {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+} 
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10px;
+  animation: slideShow 12s infinite;
+  opacity: 0;
+} 
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+/* Add more slides as needed */
+
+.caption {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes slideShow {
+  0% {opacity: 0;}
+  8% {opacity: 1;}
+  33% {opacity: 1;}
+  41% {opacity: 0;}
+  100% {opacity: 0; animation-delay: 10s;}
+}
+        nav a.active {
+    color: #fff;
+    background-color: #1D428A;
+    
+}
+        #button {
+            background-color: #1D428A;
+            color: white;
+            border-radius: 4px 4px 4px 4px;
+            
+        }
+        button:hover {
+            opacity: 0.8;
+            transform: scale(1.4);
+        }
+        
+        #field {
+            border-radius: 4px 4px 4px 4px;
+            background-color: dimgrey;
+        }
+        
+        #field:focus {
+            background-color: white;
+            color: #860038;
+        }
+        
+        input::placeholder {
+  color: #860038;
+}
+        .radio-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-row {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.radio-row label {
+  flex: 1 1 12.5%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.radio-row input[type="radio"] {
+  display: flex;
+}
+        
+        td {
+            font-size: 18pt;
+            text-align: center;
+            font-family: monospace;
+            width: 550px;
+            height: 240px;
+        }
+        
+        thead {
+            font-size: 24pt;
+            font-family: monospace;
+        }
+        p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="nbalogo4.png" alt="NBA Logo" id="nba-logo" style="width: 8%">
+        <!--<h1>Welcome to the NBA's Official Website!</h1>-->
+        <nav style="position: absolute; top: auto; left: 1000px;">
+            <ul>
+                <li><a href=home.html>HOME</a></li>
+                <li><a href="teams.html">TEAMS &amp; PLAYERS</a></li>
+                <li><a href="schedule.html">SCHEDULE</a></li>
+                <li><a href="stats.html" class="active">HISTORY</a></li>
+            </ul>
+        </nav>
+        <div id="loginform">
+            <input type="text" id="field" placeholder="Username" style="position: absolute;top: -30px; width: 150px; height: 30px">
+            <input type="password" id="field" placeholder="Password" style="position: absolute; top: 10px; width: 150px; height: 30px">
+        </div>
+         <button id="button" style="position: absolute; top: 65px; left: 2190px; width: 85px; height: 35px;"> LOG IN </button>
+    </header>
+    <body>
+       <h1>BACKGROUND INFORMATION ABOUT BASKETBALL:</h1>
+        <p style="text-align: justify-all;text-justify: auto; font-size: 20pt">Basketball, a sport now globally beloved, was invented in 1891 by Dr. James Naismith, a Canadian physical education instructor. <br> Seeking a game that could be played indoors during the harsh winters, he devised basketball with a simple set of rules and <br> equipment: a soccer ball and two peach baskets. From its humble beginnings in a YMCA gymnasium in Springfield, Massachusetts, the <br> sport quickly gained popularity across the United States and beyond. Its fast-paced action and accessibility made it a favorite <br> among players and spectators alike.</p>
+    <h1>THE NBA STORY:</h1>
+        <p style="font-size: 20pt">The National Basketball Association (NBA), founded in New York City in 1946 as the Basketball Association of America (BAA), merged <br> with its rival, the National Basketball League (NBL), in 1949 to form the NBA we know today. Initially, the league struggled to gain <br> traction, facing financial challenges and competition from other sports leagues. However, with the emergence of stars like <br> Bill Russell, Wilt Chamberlain, and later, Magic Johnson and Larry Bird, the NBA rose to prominence. The 1980s marked a turning <br> point with the global expansion of the league, led by iconic figures like Michael Jordan, whose transcendent talent and marketability <br> propelled basketball into a worldwide phenomenon.</p>
+    <h1>TEAMS WITH MOST NBA CHAMPION TITLES:</h1>
+        <p style="font-size: 20pt">As for NBA championships, the Boston Celtics hold the record with 17 titles, won between 1957 and 2008. Following closely are the <br> Los Angeles Lakers with 17 championships, earned from 1949 to 2020. Other notable teams include the Chicago Bulls with 6 titles, the <br> Golden State Warriors with 6, and the San Antonio Spurs with 5. Each franchise's championship count stands as a testament to their <br> enduring legacy and contribution to the rich tapestry of NBA history.</p>
+    </body>
+    <br>
+    <br>
+    <footer style="position: sticky; top: 1000px">
+        <p>&copy; 2024 NBA Teams By Majd Al Kakhi for CSC215 | All Rights Reserved</p>
+    </footer>
+   

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Home Page</title>
+    <style>
+        body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #860038;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 0.5em;
+    border-radius: 10px 10px 10px 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 1em;
+    flex-basis: 50%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+    li {
+                flex-basis: 33.33%;
+       }
+}
+nav a {
+    text-decoration: none;
+    color: #860038;
+}
+
+nav a:hover {
+    color: #1D428A;
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.2);
+    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+footer {
+    background-color: #860038;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    margin-top: 2em;
+}
+        #loginform {
+            position: absolute;
+            left: 2000px;
+            resize: 100px;
+             border-radius: 10px 10px 10px 10px;
+        }
+        .team-list,.player-list {
+    flex-basis: 40%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-list h1,.player-list h1 {
+    margin-top: 0;
+}
+
+.team,.player {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.team img,.player img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team h2,.player h2 {
+    margin-top: 0;
+}
+        nav a.active {
+    color: #fff;
+    background-color: #1D428A;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="nbalogo4.png" alt="NBA Logo" id="nba-logo" style="width: 8%">
+        <!--<h1>Welcome to the NBA's Official Website!</h1>-->
+        <nav style="position: absolute; top: auto; left: 1000px;">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="teams.html" class="active">TEAMS &amp; PLAYERS</a></li>
+                <li><a href="schedule.html">SCHEDULE</a></li>
+                <li><a href="stats.html">HISTORY</a></li>
+            </ul>
+        </nav>
+        <div id="loginform">
+            <input type="text" placeholder="Username" style="position: absolute;top: -30px; width: 150px; height: 30px">
+            <input type="password" placeholder="Password" style="position: absolute; top: 10px; width: 150px; height: 30px">
+        </div>
+         <button style="position: absolute; top: 65px; left: 2170px; width: 75px; height: 25px;"> LOG IN </button>
+    </header>
+<main>
+        <section class="team-list">
+            <h1>Hot NBA Teams this season:</h1>
+            <ul style="list-style-type: none">
+                <li>
+                    <div class="team">
+                        <img src="lakers.png" alt="Los Angeles Lakers Logo" style="width: auto">
+                        <h2>Los Angeles Lakers</h2>
+                        <p>Conference: Western</p>
+                        <p>Division: Pacific</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="team">
+                        <img src="celtics.webp" alt="Boston Celtics Logo" style="width: inherit">
+                        <h2>Boston Celtics</h2>
+                        <p>Conference: Eastern</p>
+                        <p>Division: Atlantic</p>
+                    </div>
+                </li>
+                <!-- Add more teams as needed -->
+            </ul>
+        </section>
+        <section class="player-list">
+            <h1>Hot NBA Players This Season:</h1>
+            <ul style="list-style-type: square">
+                <li>
+                    <div class="player">
+                        <img src="lbj.png" alt="LeBron James" style="position: absolute; top: 250px; right: 300px; width: auto; height: 150px">
+                        <h2>LeBron James</h2>
+                        <p>Team: Los Angeles Lakers</p>
+                        <p>Position: Forward</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="player">
+                        <img src="stephcurry.png" alt="Stephen Curry" style="position: absolute; top: 440px; right: 295px; width: auto; height: 150px">
+                        <h2>Stephen Curry</h2>
+                        <p>Team: Golden State Warriors</p>
+                        <p>Position: Guard</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="player">
+                        <img src="giannis.png" alt="Giannis Antetekunmpo" style="position: absolute; top: 620px; right: 295px; width: auto; height: 150px">
+                        <h2>Giannis Antetokounmpo</h2>
+                        <p>Team: Miluakee Bucks</p>
+                        <p>Position: Center or PowerForward</p>
+                    </div>
+                </li>
+                <!-- Add more players as needed -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 NBA Teams By Majd Al Kakhi for CSC215 | All Rights Reserved</p>
+    </footer>
+   
